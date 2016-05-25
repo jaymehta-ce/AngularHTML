@@ -4,5 +4,8 @@ class WelcomeController < ApplicationController
   def index
 
   end
+  def show
+    render template: "assets/#{params[:page]}"
+  end
 
 end

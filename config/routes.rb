@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  get "/assets/:page" => "pages#show"
+  get "/pages/:page" => "pages#show"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

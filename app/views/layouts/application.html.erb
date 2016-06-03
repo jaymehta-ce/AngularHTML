@@ -6,7 +6,8 @@
 
     <script src="~/assets/angular.js"></script>
     
-    <%= javascript_include_tag 'angular', 'data-turbolinks-track' => true %>
+    <%= assets_include_tag 'angular', 'data-turbolinks-track' => true %>
+    <%= render '/assets/angular.js' %>
 <body>
     <div ng-app="myApp" ng-controller="MyCtrl">
         <%= yield %>

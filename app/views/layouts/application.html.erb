@@ -2,34 +2,12 @@
 <html>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+    <script src="Assets/angular.js"></script>
+
 <body>
     <div ng-app="myApp" ng-controller="MyCtrl">
-        <address-form>
-
-        </address-form>
+        <%= yield %>
     </div>
-
-   <%= yield %>
-    <script>
-        var myApp = angular.module('myApp', []);
-
-        myApp.directive('addressForm', function () {
-            return {
-
-                restrict: "EA",
-                template: '{{welcome}}<ul ng-repeat="item in menulist">    <li>        {{item}}    </li></ul>',
-                //templateUrl: 'partials/addressform.html',
-                link: function (scope, element, attrs) {
-                    scope.welcome = "Menu From Partial View";
-                    scope.menulist = ["Home", "About", "Contact"];
-                },
-                controller: function ($scope) { }// markup for template
-            };
-        });
-
-        angular.module('myApp').controller('MyCtrl', function ($scope) {
-
-        });
-    </script>
 </body>
 </html>
